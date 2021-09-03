@@ -1,0 +1,15 @@
+webpackHotUpdate("main",{
+
+/***/ "./src/AxiosPractice2.js":
+/*!*******************************!*\
+  !*** ./src/AxiosPractice2.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed (from ./node_modules/react-scripts/node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/ryo/Desktop/Website_practice/practice/src/AxiosPractice2.js: 'return' outside of function (23:4)\n\n\u001b[0m \u001b[90m 21 |\u001b[39m     \u001b[90m// };\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m     \u001b[36mreturn\u001b[39m (\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 24 |\u001b[39m         \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 25 |\u001b[39m             \u001b[33m<\u001b[39m\u001b[33mbutton\u001b[39m onClick\u001b[33m=\u001b[39m{getData}\u001b[33m>\u001b[39m\u001b[33mGetData\u001b[39m\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mbutton\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 26 |\u001b[39m             \u001b[33m<\u001b[39m\u001b[33mbutton\u001b[39m onClick\u001b[33m=\u001b[39m{postData}\u001b[33m>\u001b[39m\u001b[33mPostData\u001b[39m\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mbutton\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n    at _temp._raise (/Users/ryo/Desktop/Website_practice/practice/node_modules/@babel/parser/lib/index.js:776:17)\n    at _temp.raiseWithData (/Users/ryo/Desktop/Website_practice/practice/node_modules/@babel/parser/lib/index.js:769:17)\n    at _temp.raise (/Users/ryo/Desktop/Website_practice/practice/node_modules/@babel/parser/lib/index.js:737:17)\n    at _temp.parseReturnStatement (/Users/ryo/Desktop/Website_practice/practice/node_modules/@babel/parser/lib/index.js:12218:12)\n    at _temp.parseStatementContent (/Users/ryo/Desktop/Website_practice/practice/node_modules/@babel/parser/lib/index.js:11905:21)\n    at _temp.parseStatement (/Users/ryo/Desktop/Website_practice/practice/node_modules/@babel/parser/lib/index.js:11857:17)\n    at _temp.parseStatement (/Users/ryo/Desktop/Website_practice/practice/node_modules/@babel/parser/lib/index.js:2847:26)\n    at _temp.parseBlockOrModuleBlockBody (/Users/ryo/Desktop/Website_practice/practice/node_modules/@babel/parser/lib/index.js:12439:25)\n    at _temp.parseBlockBody (/Users/ryo/Desktop/Website_practice/practice/node_modules/@babel/parser/lib/index.js:12430:10)\n    at _temp.parseTopLevel (/Users/ryo/Desktop/Website_practice/practice/node_modules/@babel/parser/lib/index.js:11788:10)");
+
+/***/ })
+
+})
+//# sourceMappingURL=main.3865d5693dcb02a0aac4.hot-update.js.map
