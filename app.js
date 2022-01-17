@@ -14,6 +14,108 @@ let imgSrc
 let imgArrow
 let imgPage
 
+function slideLeft(){
+    let currentImg = $("#popup-container img").attr("src");
+    if (imgArrow == "artwork1") {
+        let index = artwork1.indexOf(currentImg);
+        if (index - 1 < 0) {
+            $("#popup-container img").attr("src", artwork1[artwork1.length - 1]);
+        } else {
+            $("#popup-container img").attr("src", artwork1[index - 1]);
+        }            
+    }
+    if (imgArrow == "artwork2") {
+        let index = artwork2.indexOf(currentImg);
+        if (index - 1 < 0) {
+            $("#popup-container img").attr("src", artwork2[artwork2.length - 1]);
+        } else {
+            $("#popup-container img").attr("src", artwork2[index - 1]);
+        }            
+    }
+    if (imgArrow == "artwork3") {
+        let index = artwork3.indexOf(currentImg);
+        if (index - 1 < 0) {
+            $("#popup-container img").attr("src", artwork3[artwork3.length - 1]);
+        } else {
+            $("#popup-container img").attr("src", artwork3[index - 1]);
+        }            
+    }
+    if (imgArrow == "artwork4") {
+        let index = artwork4.indexOf(currentImg);
+        if (index - 1 < 0) {
+            $("#popup-container img").attr("src", artwork4[artwork4.length - 1]);
+        } else {
+            $("#popup-container img").attr("src", artwork4[index - 1]);
+        }            
+    }
+    let newImg = $("#popup-container img").attr("src");
+        ImgPage = $("img[src='" + newImg + "']").attr("alt");
+        $("#popup-container p").text(ImgPage);
+        // let newImgPage = $("img[src='" + newImg + "']").attr("alt");
+        // $("#popup-container p").text(newImgPage);
+}
+
+function slideRight() {
+    let currentImg = $("#popup-container img").attr("src");
+    if (imgArrow == "artwork1") {
+        let index = artwork1.indexOf(currentImg);
+        if (index + 1 > artwork1.length - 1) {
+            $("#popup-container img").attr("src", artwork1[0]);
+        } else {
+            $("#popup-container img").attr("src", artwork1[index + 1]);
+        }
+    }
+    if (imgArrow == "artwork2") {
+        let index = artwork2.indexOf(currentImg);
+        if (index + 1 > artwork2.length - 1) {
+            $("#popup-container img").attr("src", artwork2[0]);
+        } else {
+            $("#popup-container img").attr("src", artwork2[index + 1]);
+        }
+    }
+    if (imgArrow == "artwork3") {
+        let index = artwork3.indexOf(currentImg);
+        if (index + 1 > artwork3.length - 1) {
+            $("#popup-container img").attr("src", artwork3[0]);
+        } else {
+            $("#popup-container img").attr("src", artwork3[index + 1]);
+        }
+    }
+    if (imgArrow == "artwork4") {
+        let index = artwork4.indexOf(currentImg);
+        if (index + 1 > artwork4.length - 1) {
+            $("#popup-container img").attr("src", artwork4[0]);
+        } else {
+            $("#popup-container img").attr("src", artwork4[index + 1]);
+        }
+    }
+    let newImg = $("#popup-container img").attr("src");
+        ImgPage = $("img[src='" + newImg + "']").attr("alt");
+        $("#popup-container p").text(ImgPage);
+        // let newImgPage = $("img[src='" + newImg + "']").attr("alt");
+        // $("#popup-container p").text(newImgPage);
+}
+
+function slideCharacterLeft(){
+    let clickImg = $("#popup-container img").attr("src");
+        let index = character.indexOf(clickImg);
+        if (index - 1 < 0) {
+            $("#popup-container img").attr("src", character[character.length - 1]);
+        } else {
+            $("#popup-container img").attr("src", character[index - 1]);
+        }            
+} 
+
+function slideCharacterRight(){
+    let clickImg = $("#popup-container img").attr("src");
+        let index = character.indexOf(clickImg);
+        if (index + 1 > character.length - 1) {
+            $("#popup-container img").attr("src", character[0]);
+        } else {
+            $("#popup-container img").attr("src", character[index + 1]);
+        }
+}
+
 $(document).ready(function() {
     // show popup
     $(".slide-overview").click(function() {
@@ -36,86 +138,31 @@ $(document).ready(function() {
 
     // left button
     $("#left").click(function() {
-        let currentImg = $("#popup-container img").attr("src");
-        if (imgArrow == "artwork1") {
-            let index = artwork1.indexOf(currentImg);
-            if (index - 1 < 0) {
-                $("#popup-container img").attr("src", artwork1[artwork1.length - 1]);
-            } else {
-                $("#popup-container img").attr("src", artwork1[index - 1]);
-            }            
-        }
-        if (imgArrow == "artwork2") {
-            let index = artwork2.indexOf(currentImg);
-            if (index - 1 < 0) {
-                $("#popup-container img").attr("src", artwork2[artwork2.length - 1]);
-            } else {
-                $("#popup-container img").attr("src", artwork2[index - 1]);
-            }            
-        }
-        if (imgArrow == "artwork3") {
-            let index = artwork3.indexOf(currentImg);
-            if (index - 1 < 0) {
-                $("#popup-container img").attr("src", artwork3[artwork3.length - 1]);
-            } else {
-                $("#popup-container img").attr("src", artwork3[index - 1]);
-            }            
-        }
-        if (imgArrow == "artwork4") {
-            let index = artwork4.indexOf(currentImg);
-            if (index - 1 < 0) {
-                $("#popup-container img").attr("src", artwork4[artwork4.length - 1]);
-            } else {
-                $("#popup-container img").attr("src", artwork4[index - 1]);
-            }            
-        }
-        let newImg = $("#popup-container img").attr("src");
-            ImgPage = $("img[src='" + newImg + "']").attr("alt");
-            $("#popup-container p").text(ImgPage);
-            // let newImgPage = $("img[src='" + newImg + "']").attr("alt");
-            // $("#popup-container p").text(newImgPage);
+        slideLeft()
     })
+
     // right button
     $("#right").click(function() {
-        let currentImg = $("#popup-container img").attr("src");
-        if (imgArrow == "artwork1") {
-            let index = artwork1.indexOf(currentImg);
-            if (index + 1 > artwork1.length - 1) {
-                $("#popup-container img").attr("src", artwork1[0]);
-            } else {
-                $("#popup-container img").attr("src", artwork1[index + 1]);
-            }
-        }
-        if (imgArrow == "artwork2") {
-            let index = artwork2.indexOf(currentImg);
-            if (index + 1 > artwork2.length - 1) {
-                $("#popup-container img").attr("src", artwork2[0]);
-            } else {
-                $("#popup-container img").attr("src", artwork2[index + 1]);
-            }
-        }
-        if (imgArrow == "artwork3") {
-            let index = artwork3.indexOf(currentImg);
-            if (index + 1 > artwork3.length - 1) {
-                $("#popup-container img").attr("src", artwork3[0]);
-            } else {
-                $("#popup-container img").attr("src", artwork3[index + 1]);
-            }
-        }
-        if (imgArrow == "artwork4") {
-            let index = artwork4.indexOf(currentImg);
-            if (index + 1 > artwork4.length - 1) {
-                $("#popup-container img").attr("src", artwork4[0]);
-            } else {
-                $("#popup-container img").attr("src", artwork4[index + 1]);
-            }
-        }
-        let newImg = $("#popup-container img").attr("src");
-            ImgPage = $("img[src='" + newImg + "']").attr("alt");
-            $("#popup-container p").text(ImgPage);
-            // let newImgPage = $("img[src='" + newImg + "']").attr("alt");
-            // $("#popup-container p").text(newImgPage);
+        slideRight()
     })
+
+    // arrow keys
+    $(document).keydown(function(e){
+        let src = $("#popup-container img").attr("src")
+        if(src.length > 0){
+            if (e.which == 37) { 
+                slideLeft()
+                slideCharacterLeft()
+                return false;
+            }
+            if (e.which == 39) {
+                slideRight()
+                slideCharacterRight()
+                return false;
+            }
+        }
+    });
+    
 
     // video popup
     $(".thumbnail").click(function() {
@@ -154,25 +201,29 @@ $(document).ready(function() {
         return false;
     })
 
+    // popup header img
+    $(".header-img").click(function() {
+        let selectedImg = $(this).attr("src");
+        $(".character-header img").attr("src", selectedImg);
+        $(".character-header").fadeIn(500);
+        $("body,html").css("overflow-y", "hidden");
+        return false;
+    })
+
+    // close popup header img
+    $(".character-header #close-btn").click(function() {
+        $(".character-header").fadeOut(500);
+        $("body,html").css("overflow-y", "visible");
+        return false;
+    })
+
     // left arrow 
     $("#left-character").click(function() {
-        let clickImg = $("#popup-container img").attr("src");
-        let index = character.indexOf(clickImg);
-        if (index - 1 < 0) {
-            $("#popup-container img").attr("src", character[character.length - 1]);
-        } else {
-            $("#popup-container img").attr("src", character[index - 1]);
-        }            
+        slideCharacterLeft()
     })
 
     // right arrow 
     $("#right-character").click(function() {
-        let clickImg = $("#popup-container img").attr("src");
-        let index = character.indexOf(clickImg);
-        if (index + 1 > character.length - 1) {
-            $("#popup-container img").attr("src", character[0]);
-        } else {
-            $("#popup-container img").attr("src", character[index + 1]);
-        }
+        slideCharacterRight()
     })
 })

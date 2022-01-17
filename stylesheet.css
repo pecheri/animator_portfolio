@@ -22,7 +22,6 @@ nav {
     width: 280px;
     position: fixed;
     padding: 20px 0 0 30px;
-    /* background-color: aqua; */
 }
 
 .name {
@@ -130,13 +129,11 @@ main {
 .overviews {
     width: 60%;
     padding: 0 5px 0 0;
-    /* background-color: yellowgreen; */
 }
 
 .overview-p {
     font-size: 18px;
     margin-top: 20px;
-    /* width: 100%; */
     padding: 0 0 0 10px;
 }
 
@@ -144,12 +141,11 @@ main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* justify-content: space-between; */
-    /* background-color: yellow; */
 }
 
 .slide-overview {
     width: calc(100%/4);
+    height: 100%;
     padding: 5px;
 }
 
@@ -159,7 +155,6 @@ main {
 
 .video-thumbnail {
     flex-grow: 1;
-    /* background-color: violet; */
     width: 40%;
     padding: 0 0 0 5px;
 }
@@ -167,7 +162,6 @@ main {
 .thumbnail-p {
     font-size: 18px;
     margin-top: 20px;
-    /* width: 100%; */
     padding: 0 0 0 10px;
 }
 
@@ -224,7 +218,6 @@ footer {
 #left, #left-character {
     width: 50vw;
     height: 100vh;
-    /* background-color: rgba(247, 2, 2, 0.219); */
     z-index: 90;
     opacity: 0;
     transition: 0.3s;
@@ -243,7 +236,6 @@ footer {
 #right, #right-character {
     width: 50vw;
     height: 100vh;
-    /* background-color: rgba(47, 2, 247, 0.219); */
     z-index: 90;
     opacity: 0;
     transition: 0.3s;
@@ -297,6 +289,7 @@ footer {
     height: 100vh;
     display: none;
     background-color: rgba(0, 0, 0, 0.918);
+    z-index: 999;
 }
 
 #close-btn-video {
@@ -320,8 +313,6 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* max-width: 80vw;
-    max-height: 80vh; */
     position: absolute;
     width: 100%;
     max-width: 1200px;
@@ -395,7 +386,7 @@ footer {
     width: 100%;
 }
 
-.character-design-img img:hover {
+.character-design-img img:hover, .header-img:hover {
     cursor: pointer;
 }
 
@@ -412,7 +403,6 @@ footer {
     }
 
     .top-menu {
-        /* background-color: rgb(255, 255, 255); */
         background: linear-gradient(to top, rgba(255, 255, 255,0.9), rgba(255, 255, 255,1));
         width: 100%;
         padding: 10px 10px 0 10px;
@@ -471,6 +461,7 @@ footer {
 
     .slide-overview {
         width: calc(100%/3);
+        height: 100%;
         padding: 5px;
         margin: 0;
     }
