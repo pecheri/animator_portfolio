@@ -147,21 +147,46 @@ $(document).ready(function() {
     })
 
     // arrow keys
-    $(document).keydown(function(e){
-        let src = $("#popup-container img").attr("src")
-        if(src.length > 0){
-            if (e.which == 37) { 
-                slideLeft()
-                slideCharacterLeft()
-                return false;
+    if(location.pathname == "/") {
+        $(document).keydown(function(e){
+            let indexImgSrc = $(".index-popup img").attr("src")
+            console.log($(document).title);
+            console.log("path",location.pathname);
+            if(indexImgSrc.length > 0){
+                
+                if (e.which == 37) { 
+                    slideLeft()
+                    return false;
+                }
+                if (e.which == 39) {
+                    slideRight()
+                    return false;
+                }
             }
-            if (e.which == 39) {
-                slideRight()
-                slideCharacterRight()
-                return false;
+        });
+    }
+
+    if(location.pathname == "/character_design.html") {
+        $(document).keydown(function(e){
+            let characterImgSrc = $(".character-popup img").attr("src")
+            console.log("characterImgSrc",characterImgSrc);
+            console.log("path",location.pathname);
+            if(characterImgSrc.length > 0){
+                
+                if (e.which == 37) { 
+                    slideCharacterLeft()
+                    return false;
+                }
+                if (e.which == 39) {
+                    slideCharacterRight()
+                    return false;
+                }
             }
-        }
-    });
+        });
+    }
+
+    
+
     
 
     // video popup
