@@ -150,8 +150,6 @@ $(document).ready(function() {
     if(location.pathname == "/") {
         $(document).keydown(function(e){
             let indexImgSrc = $(".index-popup img").attr("src")
-            console.log($(document).title);
-            console.log("path",location.pathname);
             if(indexImgSrc.length > 0){
                 
                 if (e.which == 37) { 
@@ -169,8 +167,6 @@ $(document).ready(function() {
     if(location.pathname == "/character_design.html") {
         $(document).keydown(function(e){
             let characterImgSrc = $(".character-popup img").attr("src")
-            console.log("characterImgSrc",characterImgSrc);
-            console.log("path",location.pathname);
             if(characterImgSrc.length > 0){
                 
                 if (e.which == 37) { 
